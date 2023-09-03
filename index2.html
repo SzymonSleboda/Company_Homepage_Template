@@ -10,81 +10,126 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <style>
+      .section-card {
+        width: 18rem;
+        border: none;
+      }
+      .colorful-area {
+        /* max-width: ; */
+        background-color: #c9d2de ; /* Kolor tła */
+        width: 15vw;
+      }
+      .section {
+        padding-top: 50px; /* Odstęp na górze sekcji */
+            padding-bottom: 50px; /* Odstęp na dole sekcji */
+            min-height: 300px; /* Minimalna wysokość sekcji */
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand bg-primary">
-      <div class="container">
-        <ul class="navbar-nav d-flex align-items-center">
-          <li class="nav-item pe-4">
-            <button class="btn btn-sm btn-secondary btn-block">Logo</button>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active px-4" aria-current="page" href="#"
-              >Start</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-4" href="#">Pricing</a>
-          </li>
-        </ul>
-        <button class="btn btn-secondary bg-dark ml-auto px-4">Cart (1)</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Dodaj przycisk do zmiany menu na mobilnych urządzeniach -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Zawartość głównego menu nawigacyjnego -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="container d-flex justify-content-between">
+          <ul class="navbar-nav d-flex align-items-center">
+            <li class="nav-item">
+              <button class="btn btn-sm btn-secondary btn-block">Logo</button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Start</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+          <button class="btn btn-secondary bg-dark ml-auto">Cart (1)</button>
+        </div>
       </div>
     </nav>
-    <section>
-      <div class="card" style="width: 18rem; border: none">
-        <img
-          src="https://placehold.co/600x400"
-          class="card-img-top"
-          alt="Obrazek"
-        />
-        <div class="card-body ps-0">
-          <h5 class="card-title">Tytuł karty</h5>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex
-          </p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem; border: none">
-        <img
-          src="https://placehold.co/600x400"
-          class="card-img-top"
-          alt="Obrazek"
-        />
-        <div class="card-body ps-0">
-          <h5 class="card-title">Tytuł karty</h5>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex
-          </p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem; border: none">
-        <img
-          src="https://placehold.co/600x400"
-          class="card-img-top"
-          alt="Obrazek"
-        />
-        <div class="card-body ps-0">
-          <h5 class="card-title">Tytuł karty</h5>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex
-          </p>
-        </div>
+    <section class="section container d-flex justify-content-between">
+      <div class="colorful-area rounded d-none d-xl-block"></div>
+      <div>
+        <h1 class="pb-3"  >Title 1</h1>
+        <ul class="row list-unstyled justify-content-center">
+          <li class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card section-card mb-4">
+              <img
+                src="https://placehold.co/600x400"
+                class="card-img-top"
+                alt="Obrazek"
+              />
+              <div class="card-body ps-0">
+                <h5 class="card-title">Tytuł karty</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card section-card mb-4">
+              <img
+                src="https://placehold.co/600x400"
+                class="card-img-top"
+                alt="Obrazek"
+              />
+              <div class="card-body ps-0">
+                <h5 class="card-title">Tytuł karty</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card section-card mb-4">
+              <img
+                src="https://placehold.co/600x400"
+                class="card-img-top"
+                alt="Obrazek"
+              />
+              <div class="card-body ps-0">
+                <h5 class="card-title">Tytuł karty</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
