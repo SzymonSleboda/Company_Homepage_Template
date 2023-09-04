@@ -12,23 +12,73 @@
     />
     <style>
       .section-card {
-        width: 18rem;
+        width: 100%;
         border: none;
       }
       .colorful-area {
-        /* max-width: ; */
-        background-color: #c9d2de ; /* Kolor tła */
-        width: 15vw;
+        background: #c9d2de; /* Kolor tła */
+        min-width: 25%;
       }
       .section {
-        padding-top: 50px; /* Odstęp na górze sekcji */
-            padding-bottom: 50px; /* Odstęp na dole sekcji */
-            min-height: 300px; /* Minimalna wysokość sekcji */
+        padding-top: 30px; /* Odstęp na górze sekcji */
+        padding-bottom: 30px; /* Odstęp na dole sekcji */
+        min-height: 300px; /* Minimalna wysokość sekcji */
+      }
+
+      .footer {
+        background: #49525d;
+        max-height: 250px;
+      }
+      .footer-colorful--area {
+        background: #c9d2de;
+      }
+      .card-wrapper {
+        @media screen and (min-width: 992px) {
+          max-width: 70%;
+        }
+      }
+      .navbar-color {
+        background: #c9d2de;
+      }
+      .nav-items {
+        flex-direction: column; /* Ustaw kierunek na kolumnę */
+        align-items: center; /* Wyśrodkuj elementy w pionie */
+        text-align: center;
+        justify-content: center;
+        @media screen and (min-width: 992px) {
+          justify-content: space-between;
+          display: flex;
+          flex-direction: row;
+          height: 50px;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .nav-list {
+          width: 45%;
+          justify-content: space-between;
+          height: 100%;
+        }
+
+        .nav-list li:nth-child(2) {
+          background: #e5e8f1;
+        }
+      }
+      .nav-logo--button {
+        width: 100px;
+        height: 30px;
+        background: #848fa2;
+      }
+      .nav-cart--button {
+        width: 100px;
+        background: #49525d;
+      }
+      .navbar-menu--collapsed {
+        height: 50px;
       }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-color p-0">
       <!-- Dodaj przycisk do zmiany menu na mobilnych urządzeniach -->
       <button
         class="navbar-toggler"
@@ -44,13 +94,17 @@
 
       <!-- Zawartość głównego menu nawigacyjnego -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="container d-flex justify-content-between">
-          <ul class="navbar-nav d-flex align-items-center">
+        <div class="container nav-items">
+          <ul class="navbar-nav nav-list d-flex align-items-center gx-3">
             <li class="nav-item">
-              <button class="btn btn-sm btn-secondary btn-block">Logo</button>
+              <button
+                class="btn btn-sm btn-secondary btn-block nav-logo--button"
+              >
+                Logo
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Start</a>
+              <a class="nav-link" href="#">Start</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -62,14 +116,16 @@
               <a class="nav-link" href="#">Pricing</a>
             </li>
           </ul>
-          <button class="btn btn-secondary bg-dark ml-auto">Cart (1)</button>
+          <button class="btn btn-secondary nav-cart--button ml-auto">
+            Cart (1)
+          </button>
         </div>
       </div>
     </nav>
     <section class="section container d-flex justify-content-between">
-      <div class="colorful-area rounded d-none d-xl-block"></div>
-      <div>
-        <h1 class="pb-3"  >Title 1</h1>
+      <div class="colorful-area rounded d-none d-lg-block"></div>
+      <div class="card-wrapper">
+        <h1 class="pb-3">Title 1</h1>
         <ul class="row list-unstyled justify-content-center">
           <li class="col-lg-4 col-md-6 col-sm-12">
             <div class="card section-card mb-4">
@@ -78,13 +134,12 @@
                 class="card-img-top"
                 alt="Obrazek"
               />
-              <div class="card-body ps-0">
-                <h5 class="card-title">Tytuł karty</h5>
+              <div class="card-body ps-0 pb-0">
+                <h3 class="card-title py-3">Lorem ipsum dolor</h3>
                 <p class="card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex
+                  Ut enim ad minim veniam.
                 </p>
               </div>
             </div>
@@ -96,13 +151,12 @@
                 class="card-img-top"
                 alt="Obrazek"
               />
-              <div class="card-body ps-0">
-                <h5 class="card-title">Tytuł karty</h5>
+              <div class="card-body ps-0 pb-0">
+                <h3 class="card-title py-3">Lorem ipsum dolor</h3>
                 <p class="card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex
+                  Ut enim ad minim veniam.
                 </p>
               </div>
             </div>
@@ -114,18 +168,40 @@
                 class="card-img-top"
                 alt="Obrazek"
               />
-              <div class="card-body ps-0">
-                <h5 class="card-title">Tytuł karty</h5>
+              <div class="card-body ps-0 pb-0">
+                <h3 class="card-title py-3">Lorem ipsum dolor</h3>
                 <p class="card-text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex
+                  Ut enim ad minim veniam.
                 </p>
               </div>
             </div>
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="footer-colorful--area"></div>
+      <div class="d-flex flex-wrap">
+        <div>
+          <ul class="list-unstyled text-white">
+            <li>Słowo 1</li>
+            <li>Słowo 2</li>
+            <li>Słowo 3</li>
+            <li>Słowo 4</li>
+            <li>Słowo 5</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="list-unstyled text-white">
+            <li>Słowo 6</li>
+            <li>Słowo 7</li>
+            <li>Słowo 8</li>
+            <li>Słowo 9</li>
+            <li>Słowo 10</li>
+          </ul>
+        </div>
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
