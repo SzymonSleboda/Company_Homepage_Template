@@ -11,53 +11,36 @@
       crossorigin="anonymous"
     />
     <style>
-      .main-card {
-        width: 100%;
-        border: none;
+      .main-colorful--area {
+        background: #c9d2de;
+        min-width: 25%;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      svg {
+        width: 18px;
+        fill: white;
+        transition: fill 0.3s ease;
+        &:hover {
+          cursor: pointer;
+          fill: #c9d2de;
+        }
+      }
+      .navbar-color {
+        background: #c9d2de;
       }
       .navbar-toggler {
-        display: flex;
-        align-items: center;
         margin: 10px 0px 10px 10px;
         @media screen and (min-width: 992px) {
         }
       }
       .navbar-hidden {
         padding: 10px;
-      }
-      .colorful-area {
-        background: #c9d2de;
-        min-width: 25%;
-      }
-      .main {
-        padding-top: 30px;
-        padding-bottom: 30px;
-      }
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-      .footer {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #49525d;
-        flex-direction: column;
-      }
-      .footer-colorful--area {
-        background: #c9d2de;
-        width: 140px;
-        height: 30px;
-      }
-      .card-wrapper {
-        @media screen and (min-width: 992px) {
-          max-width: 70%;
-        }
-      }
-      .navbar-color {
-        background: #c9d2de;
       }
       .nav-items {
         flex-direction: column;
@@ -73,6 +56,7 @@
           padding: 0;
         }
       }
+
       @media screen and (min-width: 992px) {
         .nav-list {
           width: 45%;
@@ -99,49 +83,51 @@
           margin-top: 0px;
         }
       }
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-      .navbar-menu--collapsed {
-        height: 50px;
-      }
+
       .nav-item {
         display: flex;
         align-items: center;
         height: 100%;
         flex-grow: 1;
       }
-
       .nav-link {
         flex-grow: 1;
         justify-content: center;
         text-align: center;
       }
-      .form-input {
-        color: white;
+      .main {
+        padding-top: 30px;
+        padding-bottom: 30px;
       }
-      .footer-button {
-        width: auto;
-        background: white;
-        color: black;
-      }
-      .form-fieldset {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+      .main-card {
         width: 100%;
+        border: none;
+      }
+      .card-wrapper {
         @media screen and (min-width: 992px) {
-          flex-direction: row;
-          height: 40px;
-          width: auto;
+          max-width: 70%;
         }
       }
-      .form-inline {
+      .footer {
+        flex: 1;
         display: flex;
         align-items: center;
+        justify-content: center;
+        background: #49525d;
+        flex-direction: column;
+      }
+      .footer-icons--list {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (min-width: 992px) {
+          width: 50%;
+        }
+      }
+      .footer-colorful--area {
+        background: #c9d2de;
+        width: 140px;
+        height: 30px;
       }
       .footer-media {
         display: flex;
@@ -151,22 +137,8 @@
         @media screen and (min-width: 992px) {
           width: auto;
         }
-      }
-      svg {
-        width: 18px;
-        fill: white;
-        transition: fill 0.3s ease;
-        &:hover {
-          cursor: pointer;
-          fill: #c9d2de;
-        }
-      }
-      .footer-icons--list {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        @media screen and (min-width: 992px) {
-          width: 50%;
+        @media screen and (max-width: 480px) {
+          width: 70%;
         }
       }
       .footer-list {
@@ -178,6 +150,7 @@
           width: 45%;
         }
       }
+
       .footer-link {
         text-decoration: none;
         color: white;
@@ -187,6 +160,7 @@
           color: #c9d2de;
         }
       }
+
       .footer-wrapper {
         display: flex;
         flex-direction: column;
@@ -200,28 +174,38 @@
           padding-bottom: 0px;
         }
       }
+
       .footer-wrapper > :first-child {
         @media screen and (min-width: 992px) {
           align-self: flex-start;
         }
       }
+
       .footer-wrapper--secondary {
         display: flex;
         justify-content: space-between;
         width: 40%;
-        @media screen and (max-width: 280px) {
+        @media screen and (max-width: 480px) {
           width: 70%;
         }
       }
+      .footer-button {
+        background: white;
+        color: black;
+      }
+      .form-label {
+        color: white;
+      }
 
-      .form-group {
+      .form-fieldset {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
         width: 100%;
         @media screen and (min-width: 992px) {
-          flex-direction: baseline;
-          align-items: flex-start;
+          flex-direction: row;
+          height: 40px;
+          width: auto;
         }
       }
     </style>
@@ -271,7 +255,7 @@
       </div>
     </nav>
     <main class="main container d-flex justify-content-between">
-      <div class="colorful-area rounded d-none d-lg-block"></div>
+      <div class="main-colorful--area rounded d-none d-lg-block"></div>
       <div class="card-wrapper">
         <h1 class="pb-3">Title 1</h1>
         <ul class="row list-unstyled justify-content-center">
@@ -365,14 +349,14 @@
           </div>
         </div>
         <div class="footer-media">
-          <form class="form-inline">
-            <div class="form-group">
-              <label for="inputEmail" class="form-input mb-2"
+          <form>
+            <div>
+              <label for="inputEmail" class="form-label mb-2"
                 >Enter your email</label
               >
               <div class="form-fieldset d-flex">
                 <input
-                  type="EMAIL"
+                  type="email"
                   class="form-control"
                   id="inputEmail"
                   placeholder="Enter your email"
@@ -384,7 +368,7 @@
               </div>
             </div>
           </form>
-          <div class="footer-icons pt-3">
+          <div class="pt-3">
             <ul class="footer-icons--list list-unstyled d-flex">
               <li>
                 <svg
