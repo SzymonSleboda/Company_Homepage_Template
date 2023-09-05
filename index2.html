@@ -113,6 +113,7 @@
         height: 100%;
         flex-grow: 1;
       }
+      
       .nav-link {
         flex-grow: 1;
         justify-content: center;
@@ -123,7 +124,6 @@
       }
       .footer-button {
         width: auto;
-        min-width: 140px;
         background: white;
         color: black;
       }
@@ -178,9 +178,9 @@
           width: 45%;
         }
       }
-      .footer-link{
+      .footer-link {
         text-decoration: none;
-        color:white;
+        color: white;
         transition: fill 0.3s ease;
         &:hover {
           cursor: pointer;
@@ -192,12 +192,12 @@
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        padding-top:40px;
-        padding-bottom:40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
         @media screen and (min-width: 992px) {
           flex-direction: row;
-          padding-top:0px;
-        padding-bottom:0px;
+          padding-top: 0px;
+          padding-bottom: 0px;
         }
       }
       .footer-wrapper > :first-child {
@@ -209,6 +209,8 @@
         display: flex;
         justify-content: space-between;
         width: 40%;
+        @media screen and (max-width: 280px) {
+        width: 70%}
       }
 
       .form-group {

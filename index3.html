@@ -113,6 +113,7 @@
         height: 100%;
         flex-grow: 1;
       }
+      
       .nav-link {
         flex-grow: 1;
         justify-content: center;
@@ -123,7 +124,6 @@
       }
       .footer-button {
         width: auto;
-        min-width: 140px;
         background: white;
         color: black;
       }
@@ -209,6 +209,8 @@
         display: flex;
         justify-content: space-between;
         width: 40%;
+        @media screen and (max-width: 280px) {
+        width: 70%}
       }
 
       .form-group {
